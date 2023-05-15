@@ -1,0 +1,15 @@
+﻿FiberCable,,,,,,,,SpliceClosure,,,,,,
+Field Name,Alias,Data Type,Allow Null,Domain,Default Value,Length,,Field Name,Alias,Data Type,Allow Null,Domain,Default Value,Length
+OBJECTID,,Object ID,FALSE,,,,,OBJECTID,,Object ID,FALSE,,,
+Shape,,Geometry,TRUE,,,,,Shape,,Geometry,TRUE,,,
+placement,Placement,Short,TRUE,placement,1,,,closure_make,Closure Make\Model,Short,TRUE,closure_makes,3,
+cable_use,Cable Use,Short,TRUE,cable_use,3,,,closure_size,Closure Size,Short,TRUE,closure_sizes,3,
+status,Status,Short,TRUE,inventory_status,1,,,closure_use,Closure Use,Short,TRUE,closure_usage,,
+hierarchy,Hierachy,Short,TRUE,hierarchy,,,,closure_splicecapacity,Splice Capacity,Short,TRUE,,,
+owner,Owner,Long,TRUE,telecom_owners,1,,,hierachy,Hierachy,Short,TRUE,hierarchy,,
+workorderid,Work Order ID,Text,TRUE,,,100,,placement,Placement,Short,TRUE,placement,1,
+globalid,globalid,Global ID,FALSE,,,,,status,Status,Short,TRUE,inventory_status,1,
+cable_type,Cable Type,Long,TRUE,cable_types,,,,owner,Owner,Long,TRUE,telecom_owners,1,
+muuid,Maverick UUID,Text,TRUE,,{00000000-0000-0000-0000-000000000000},38,,globalid,globalid,Global ID,FALSE,,,
+name,Cable Name,Text,TRUE,,,100,,structureid,Structure ID,Text,TRUE,,{00000000-0000-0000-0000-000000000000},38
+Shape_Length,,Double,TRUE,,,,,name,Name,Text,TRUE,,,100
