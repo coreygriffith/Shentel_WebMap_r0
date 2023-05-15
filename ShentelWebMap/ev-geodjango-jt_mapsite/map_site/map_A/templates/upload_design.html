@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% block content %}
+
+
+<body>
+
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+        <button class="button is-success is-fullwidth is-medium mt-5"
+                type="submit" enctype="multipart/form-data">submit
+        </button>
+        </form>
+    </div>
+
+
+{% endblock %}
+</body>
+</html>

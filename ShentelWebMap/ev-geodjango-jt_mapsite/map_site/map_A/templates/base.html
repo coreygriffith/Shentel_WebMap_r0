@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+	.navbar {
+  position: absolute;
+  top: 0;
+  width: 59%;
+  z-index: 1;
+  color: green;
+  background-color: #f4eeee;
+}
+.navbar-brand, .navbar-nav > li > a {
+  color: #1b6124;
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+
+}
+
+#map {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 0; /* set a lower z-index for the map */
+}
+
+  .map-popup {
+    padding: 15px;
+    background-color: #c2b8b8;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .map-popup h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .map-popup p {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .map-popup select {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  width: 55%;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+}
+
+.map-popup button {
+  display: inline-block;
+  width: 40%;
+  padding: 5px 5px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 350;
+  line-height: 1.4;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #61b733;
+  border-color: #626365;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header" style="display: flex;">
+        <!-- Add a div element for the logo -->
+        <div>
+          <a class="navbar-brand" href="https://www.maverickcorporation.com/" style="display: flex; align-items: center;">
+            <img src="{% static 'logo.jpg' %}" alt="Logo" width="100" height="150" class="img-responsive" style="margin-right: 10px;">
+          </a>
+        </div>
+        <!-- Add a div element for the text -->
+        <div>
+          <a class="navbar-brand" style="display: flex; align-items: center;">
+            <span style="font-size: 24px;">Maverick's Electric Vehicle Webmap Approval!</span>
+          </a>
+        </div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="{% url 'homepage' %}">Home</a></li>
+          <li><a href="{% url 'map_A:input' %}">About</a></li>
+          <li><a href="{% url 'map_A:map' %}">Approval Map</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+{% block content %}
+
+{% endblock %}

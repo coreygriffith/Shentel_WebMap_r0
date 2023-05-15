@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Display a map</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+<link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+<style>
+
+	.maplibregl-popup-content {
+		margin: 0; 
+		padding: 0;
+		border-radius: 15px;
+	}
+	/* body { margin: 10; padding: 0; }
+	#map { position: absolute; top: 10%; bottom: 0; width: 100% ; } */
+	#toggle-add-points-container {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    z-index: 1;
+  }
+  
+  #toggle-add-points {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  #toggle-add-points:hover {
+    background-color: #645a5a;
+  }
+
+  #toggle-add-points{
+  display: inline-block;
+  width: 100%;
+  padding: 5px 5px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 350;
+  line-height: 1.4;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #90ad80;
+  border-color: #626365;
+}
+
+
+
+#bufferButton-container {
+  position: absolute;
+  top: 170px;
+  right: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#bufferDistance {
+  width: 100px;
+  margin-bottom: 5px;
+}
+
+#bufferButton {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#bufferButton:hover {
+  background-color: #645a5a;
+}
+
+#bufferButton {
+  display: inline-block;
+  padding: 5px 5px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 350;
+  line-height: 1.4;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #90ad80;
+  border-color: #626365;
+}
+
+
+
+
+#switch-basemap-container {
+  position: absolute;
+  top: 270px;
+  right: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+#switch-basemap {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#switch-basemap:hover {
+  background-color: #645a5a;
+}
+
+#switch-basemap {
+  display: inline-block;
+  padding: 5px 5px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 350;
+  line-height: 1.4;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #90ad80;
+  border-color: #626365;
+}
+
+
+
+</style>
+	
+<body>
+
+
+
+
+	<div id="map">
+		<!-- Add a container for the toggle button -->
+		<div id="toggle-add-points-container">
+		  <button id="toggle-add-points" >Enable Adding Points</button>
+		</div>
+    <div id="bufferButton-container">
+      <button id="bufferButton">Show Buffer</button>
+      <label for="bufferDistance">Buffer Distance (feet):</label>
+      <input type="number" id="bufferDistance" value="20" min="0" step="1">
+    </div>
+    <div id="switch-basemap-container">
+      <button id="switch-basemap">Switch Basemap</button>
+
+    </div>
+
+
+    
+    
+	  </div>
+	  
+
+
+<script src="{% static 'basemap_no_imagery.js' %}" ></script>
+<!-- <script src="{% static 'basemap_imagery.js' %}" ></script> -->
+<!-- <script src="{% static 'status.js' %}" ></script>
+<script src="{% static 'review.js' %}" ></script> -->
+<script src="{% static 'place.js' %}" ></script>
+<!-- <script src="{% static 'bufffer.js' %}" ></script> -->
+<script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+{% endblock %}
+</body>
+</html>
