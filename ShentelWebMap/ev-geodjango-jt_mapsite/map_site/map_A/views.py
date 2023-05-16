@@ -35,10 +35,25 @@ def input_view(request):
 
 ###################################################################################################################################################################
 
+# class CombinedMapView(APIView):
+#     def get(self, request):
+#         fibercables = FiberCable.objects.all()
+#         spliceclosures = SpliceClosure.objects.all()
+
+#         fibercable_serializer = FiberCableSerializer(fibercables, many=True)
+#         spliceclosure_serializer = SpliceClosureSerializer(spliceclosures, many=True)
+
+#         return Response({
+#             'fibercables': fibercable_serializer.data,
+#             'spliceclosures': spliceclosure_serializer.data
+#         })
+
+
+
 class CombinedMapView(APIView):
     def get(self, request):
-        fibercables = FiberCable.objects.all()
-        spliceclosures = SpliceClosure.objects.all()
+        fibercables = FiberCable.objects.all()  # limit to first 10 records
+        spliceclosures = SpliceClosure.objects.all()  # limit to first 10 records
 
         fibercable_serializer = FiberCableSerializer(fibercables, many=True)
         spliceclosure_serializer = SpliceClosureSerializer(spliceclosures, many=True)
@@ -47,6 +62,9 @@ class CombinedMapView(APIView):
             'fibercables': fibercable_serializer.data,
             'spliceclosures': spliceclosure_serializer.data
         })
+
+
+
 
 ###############################################################################################################################################################################################################################################
 #@login_required #for once login autheticate is set up

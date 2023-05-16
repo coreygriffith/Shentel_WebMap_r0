@@ -23,5 +23,5 @@ class FiberCableSerializer(GeoFeatureModelSerializer):
 class SpliceClosureSerializer(GeoFeatureModelSerializer):
     class Meta:
         model = SpliceClosure
-        fields = ('ogc_fid', 'closure_make', 'closure_size', 'closure_use', 'closure_splicecapacity', 'hierarchy', 'placement', 'status', 'owner', 'globalid', 'structureid', 'name')
+        fields = ('ogc_fid', 'closure_make', 'closure_size', 'closure_use', 'closure_splicecapacity', 'hierachy', 'placement', 'status', 'owner', 'globalid', 'structureid', 'name')
         geo_field = "wkb_geometry"

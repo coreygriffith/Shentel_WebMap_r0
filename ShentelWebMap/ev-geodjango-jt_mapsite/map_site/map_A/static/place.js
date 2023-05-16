@@ -1,4 +1,4 @@
-console.log('comeing from place.js')
+console.log('comeing from place.js!!!')
 
 let fiberCableData = null;
 let spliceClosureData = null;
@@ -22,7 +22,7 @@ map.on('load', function () {
         'source': 'fiberCable',
         'paint': {
           'line-color': 'blue',
-          'line-width': 2
+          'line-width': 5
         },
         'filter': ['==', '$type', 'LineString']
       });

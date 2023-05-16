@@ -32,8 +32,8 @@ const map = new maplibregl.Map({
       }
     ]
   },
-  center: [-77.36647266197348, 37.76883697732219],  
-  zoom: 13
+  center: [ -77.35983589808981, 37.641662119932995], 
+  zoom: 12
 });
 
 var nav = new maplibregl.NavigationControl();

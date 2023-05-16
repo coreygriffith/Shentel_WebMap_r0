@@ -73,7 +73,7 @@ class SpliceClosure(models.Model):
     closure_size = models.IntegerField()
     closure_use = models.IntegerField(null=True)
     closure_splicecapacity = models.IntegerField(null=True)
-    hierarchy = models.IntegerField()
+    hierachy = models.IntegerField()
     placement = models.IntegerField()
     status = models.IntegerField()
     owner = models.BigIntegerField()
