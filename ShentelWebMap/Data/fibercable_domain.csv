@@ -1,0 +1,18 @@
+﻿cable_type,description,cable_use,description,closure_make,description,closure_size,description,closure_use,description,hierarchy,description,inventory status,description,placement,description,Rings,description,owner,description,yes no,description
+1,12 Count,0,Other,0,Other,0,Other,0,Other,0,Other,1,Proposed,0,Underground,1,Ring 1,0,Unknown,0,No
+2,24 Count,1,Drop,1,"Tyco, FOSC 450",1,864 Case,1,Termainal,1,Terminal,2,Approved,1,Aerial,2,Ring 2,1,Shentel,1,Yes
+3,48 Count,2,Access,2,"Clearfield, Field Smart",2,48 Cabinet,2,N/A,2,LCP,3,Under Construction,3,Unknown,3,Ring 3,,,,
+4,72 Count,3,Distribution,3,"Commscope, MST",3,72 Cabinet,3,N/A,3,OLT,4,As built,,,4,Ring 4,,,,
+5,96 Count,4,Backbone,,,4,96 Cabinet,4,RE,,,5,Pre-existing,,,,,,,,
+6,144 Count,,,,,5,144 Cabinet,5,OLT,,,6,Proposed removal,,,,,,,,
+7,288 Count,,,,,6,288 Cabinet,6,LCP,,,7,Constructed,,,,,,,,
+8,432 Count,,,,,7,432 Cabinet,7,MCA,,,,,,,,,,,,
+9,576 Count,,,,,8,576 Cabinet,,,,,,,,,,,,,,
+10,864 Count,,,,,9,2MP,,,,,,,,,,,,,,
+11,0 mp,,,,,10,4MP,,,,,,,,,,,,,,
+12,2 mp,,,,,11,6MP,,,,,,,,,,,,,,
+13,4 mp,,,,,12,8MP,,,,,,,,,,,,,,
+14,6 mp,,,,,13,12MP,,,,,,,,,,,,,,
+15,8 mp,,,,,14,B,,,,,,,,,,,,,,
+16,12 mp,,,,,15,C,,,,,,,,,,,,,,
+,,,,,,16,D,,,,,,,,,,,,,,
