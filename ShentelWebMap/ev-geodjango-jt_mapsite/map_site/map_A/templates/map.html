@@ -141,6 +141,262 @@
   border-color: #626365;
 }
 
+#filter-button-container {
+  position: absolute;
+  top: 320px;
+  right: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+#filter-button {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#filter-button:hover {
+  background-color: #645a5a;
+}
+
+#filter-button {
+  display: inline-block;
+  padding: 5px 5px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 350;
+  line-height: 1.4;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #90ad80;
+  border-color: #626365;
+}
+
+#search-container {
+    position: absolute;
+    top: 10px;
+    right: 50px; /* Adjust the value to move the search box left or right */
+    z-index: 1;
+  }
+
+  #search-input {
+    width: 200px;
+    padding: 5px;
+  }
+
+  #search-button {
+    padding: 5px 10px;
+  }
+
+  #fiber-cable-distribution {
+  position: absolute;
+  bottom: 550px;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  background-color: #dddddd;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#fiber-cable-distribution h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+#fiber-cable-distribution #pie-chart {
+  width: 100%;
+  height: 100%;
+}
+
+#fiber-cable-distribution p {
+  margin: 0;
+  text-align: center;
+}
+
+#fiber-cable-distribution p {
+  margin: 0;
+  text-align: center;
+}
+
+#fiber-cable-distribution p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+#fiber-cable-distribution #aerial-count {
+  color: red;
+}
+
+#fiber-cable-distribution #underground-count {
+  color: purple;
+}
+
+#zoom-widget {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-weight: bold;
+}
+
+#legend {
+  position: absolute;
+  left: -240px;
+  bottom: -150px;
+  display: flex;
+  background-color: rgb(128, 117, 117);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-weight: bold
+}
+
+.legend-color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%; /* Make the shape a circle */
+  border: 2px solid black; /* Add a black outline */
+}
+
+.legend-label {
+  margin-left: 5px;
+}
+
+#legendContainer {
+  position: absolute;
+  top: 370px;
+  right: 20px;
+  z-index: 1;
+}
+
+#legendButton {
+  display: inline-block;
+  padding: 5px 5px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 350;
+  line-height: 1.4;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #90ad80;
+  border-color: #626365;
+}
+
+#legendButton:hover {
+  background-color: #645a5a;
+  color: #ffffff;
+}
+
+#legend {
+  display: none;
+  /* Additional styling properties for the legend */
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  color: #333;
+}
+
+
+.chart-container {
+  width: 150px;
+  height: 150px;
+  background-color: #dddddd;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+}
+
+.chart-container h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.chart-container canvas {
+  width: 100%;
+  height: 100%;
+}
+
+#Initial-Zoom-Level {
+  position: absolute;
+  bottom: 75px;
+  left: 20px;
+  width: 250px;
+  height: 250px;
+}
+
+#initialZoomChart{
+  width: 100%;
+  height: 100%;
+}
+
+#spliceclosure-charts {
+  width: 70px;
+  height: 150px;
+  background-color: #dddddd;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+#Medium-Zoom-Level {
+  position: absolute;
+  bottom: 75px;
+  left: 300px;
+  width: 250px;
+  height: 250px;
+}
+
+#MediumZoomChart{
+  Width: 100%;
+  height: 100%;
+}
+
+#Local-Zoom-Level {
+  position: absolute;
+  bottom: 75px;
+  left: 575px;
+  width: 250px;
+  height: 250px;
+}
+
+#MediumZoomChart{
+  Width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
 
 
 </style>
@@ -150,11 +406,11 @@
 
 
 
-	<div id="map">
-		<!-- Add a container for the toggle button -->
-		<div id="toggle-add-points-container">
-		  <button id="toggle-add-points" >Enable Adding Points</button>
-		</div>
+  <div id="map">
+    <!-- Add a container for the toggle button -->
+    <div id="toggle-add-points-container">
+      <button id="toggle-add-points">Enable Adding Points</button>
+    </div>
     <div id="bufferButton-container">
       <button id="bufferButton">Show Buffer</button>
       <label for="bufferDistance">Buffer Distance (feet):</label>
@@ -162,23 +418,72 @@
     </div>
     <div id="switch-basemap-container">
       <button id="switch-basemap">Switch Basemap</button>
-
     </div>
+    <div id="filter-button-container">
+      <button id="filter-button">Click for UG only</button>
+    </div>
+    <!-- Add the search input field and search button -->
+    <div id="search-container">
+      <input type="text" id="search-input" placeholder="Search by name">
+      <button id="search-button">Search</button>
+    </div>
+  
+    <!-- Add the legend button -->
+    <div id="legendContainer">
+      <button id="legendButton">Legend</button>
+      <div id="legend"></div>
+    </div>
+  </div>
+
+  <div id="spliceclosure-charts">
+    <div id="Initial-Zoom-Level" class="chart-container">
+      <h3><strong>LCP Cabinets </strong></h3>
+      <canvas id="initialZoomChart"></canvas>
+    </div>
+  
+    <div id="Medium-Zoom-Level" class="chart-container">
+      <h3><strong>Splice Closures </strong></h3>
+      <canvas id="mediumZoomChart"></canvas>
+    </div>
+  
+    <div id="Local-Zoom-Level" class="chart-container">
+      <h3><strong>Multi-Ports </strong></h3>
+      <canvas id="localZoomChart"></canvas>
+    </div>
+  </div>
+  
+
+  <!-- Add the fiber cable distribution section -->
+  <div id="fiber-cable-distribution">
+    <h3><strong>Fiber Cable Distribution</strong></h3>
+    <p id="aerial-count"></p>
+    <p id="underground-count"></p>
+    <canvas id="pie-chart"></canvas> 
+  </div>
+
+  <!-- Add the zoom widget -->
+  <div id="zoom-widget" class="lower-right">
+    Current Zoom Level: <span id="zoom-level"></span>
+  </div>
+  
+
+  <!-- Include the required JavaScript files -->
+  <script src="{% static 'basemap_no_imagery.js' %}"></script>
+  <!-- <script src="{% static 'basemap_imagery.js' %}"></script> -->
+  <!-- <script src="{% static 'status.js' %}"></script> -->
+  <!-- <script src="{% static 'review.js' %}"></script> -->
+  <script src="{% static 'spliceclosure.js' %}"></script>
+  <script src="{% static 'spliceclosure_popup.js' %}"></script>
+  <script src="{% static 'spliceclosure_legend.js' %}"></script> 
+  <script src="{% static 'fibercable.js' %}"></script>
+  <script src="{% static 'fibercable_filter_search.js' %}"></script>
+  <script src="{% static 'fibercable_popup.js' %}"></script> 
+  <!-- <script src="{% static 'bufffer.js' %}"></script> -->
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/Chart.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
 
 
-    
-    
-	  </div>
-	  
-
-
-<script src="{% static 'basemap_no_imagery.js' %}" ></script>
-<!-- <script src="{% static 'basemap_imagery.js' %}" ></script> -->
-<!-- <script src="{% static 'status.js' %}" ></script>
-<script src="{% static 'review.js' %}" ></script> -->
-<script src="{% static 'place.js' %}" ></script>
-<!-- <script src="{% static 'bufffer.js' %}" ></script> -->
-<script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
 {% endblock %}
 </body>
 </html>

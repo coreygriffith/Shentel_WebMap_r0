@@ -28,7 +28,7 @@
 	z-index: 0; /* set a lower z-index for the map */
 }
 
-  .map-popup {
+  /* .map-popup {
     padding: 15px;
     background-color: #c2b8b8;
     border-radius: 15px;
@@ -77,7 +77,57 @@
   color: #fff;
   background-color: #61b733;
   border-color: #626365;
+} */
+
+.maplibregl-popup_cool {
+		margin: 0; 
+		padding: 0;
+		border-radius: 0px;
 }
+
+
+.maplibregl-popup.map-popup_cool {
+    max-width: 240px;
+    padding: 0;
+}
+
+
+
+
+.map-popup_cool {
+    padding: 1em;
+    color: #000;
+    background-color: #858080; /* Set the background color to gray */
+    border-radius: 5px; /* Add rounded corners to the pop-up */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+.map-popup_cool .mapboxgl-popup-close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.map-popup_cool .card {
+    width: 18rem;
+}
+
+.map-popup_cool .card-header {
+    background-color: #3a6891;
+    color: #fff;
+    font-size: large;
+    padding: 2px;
+    font-weight: bold;
+}
+
+.map-popup_cool .card-body {
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.map-popup_cool .card-body p {
+    margin-bottom: 0.5em;
+}
+
 
 
 

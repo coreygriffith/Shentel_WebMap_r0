@@ -47,19 +47,22 @@ class design(models.Model):
 
 
 class FiberCable(models.Model):
-    ogc_fid = models.IntegerField(primary_key = True)
-    placement = models.IntegerField()
-    cable_use = models.IntegerField()
+    ogc_fid = models.AutoField(primary_key=True)
+    placement = models.CharField(max_length=100)
+    cable_use = models.CharField(max_length=100)
     status = models.IntegerField()
-    hierarchy = models.IntegerField()
-    owner = models.BigIntegerField()
-    workorderid = models.CharField(max_length=100, null=True)
+    hierarchy = models.CharField(max_length=100)
+    owner = models.CharField(max_length=100)
+    workorderid = models.CharField(max_length=100, null=True, blank=True)
     globalid = models.UUIDField()
-    cable_type = models.BigIntegerField()
-    muuid = models.CharField(max_length=38)
-    name = models.CharField(max_length=100, null=True)
+    cable_type = models.CharField(max_length=100)
+    muuid = models.UUIDField()
+    name = models.CharField(max_length=100, null=True, blank=True)
     shape_length = models.FloatField(null=True)
-    wkb_geometry = models.LineStringField(null=True)
+    wkb_geometry = models.LineStringField(null=False)
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         managed = False
@@ -68,19 +71,22 @@ class FiberCable(models.Model):
 ####################################################################################
 
 class SpliceClosure(models.Model):
-    ogc_fid = models.IntegerField(primary_key = True)
-    closure_make = models.IntegerField()
-    closure_size = models.IntegerField()
-    closure_use = models.IntegerField(null=True)
-    closure_splicecapacity = models.IntegerField(null=True)
+    ogc_fid = models.AutoField(primary_key=True)
+    closure_make = models.CharField(max_length=100)
+    closure_size = models.CharField(max_length=100)
+    closure_use = models.CharField(max_length=100, null=True, blank=True)
+    closure_splicecapacity = models.IntegerField(null=True, blank=True)
     hierachy = models.IntegerField()
-    placement = models.IntegerField()
+    placement = models.CharField(max_length=100)
     status = models.IntegerField()
-    owner = models.BigIntegerField()
+    owner = models.CharField(max_length=100)
     globalid = models.UUIDField()
-    structureid = models.CharField(max_length=38)
-    name = models.CharField(max_length=100, null=True)
-    wkb_geometry = models.PointField(null=True)
+    structureid = models.UUIDField()
+    name = models.CharField(max_length=100, null=True, blank=True)
+    wkb_geometry = models.PointField(null=False)
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         managed = False

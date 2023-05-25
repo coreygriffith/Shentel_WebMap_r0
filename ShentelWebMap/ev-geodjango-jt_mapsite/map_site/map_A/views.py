@@ -35,10 +35,14 @@ def input_view(request):
 
 ###################################################################################################################################################################
 
+
+
+
+
 # class CombinedMapView(APIView):
 #     def get(self, request):
-#         fibercables = FiberCable.objects.all()
-#         spliceclosures = SpliceClosure.objects.all()
+#         fibercables = FiberCable.objects.all() # limit to first 10 records
+#         spliceclosures = SpliceClosure.objects.all()  # limit to first 10 records
 
 #         fibercable_serializer = FiberCableSerializer(fibercables, many=True)
 #         spliceclosure_serializer = SpliceClosureSerializer(spliceclosures, many=True)
@@ -52,8 +56,8 @@ def input_view(request):
 
 class CombinedMapView(APIView):
     def get(self, request):
-        fibercables = FiberCable.objects.all()  # limit to first 10 records
-        spliceclosures = SpliceClosure.objects.all()  # limit to first 10 records
+        fibercables = FiberCable.objects.all()[:3300]  # limit to first 10 records
+        spliceclosures = SpliceClosure.objects.all()[:1000]  # limit to first 10 records
 
         fibercable_serializer = FiberCableSerializer(fibercables, many=True)
         spliceclosure_serializer = SpliceClosureSerializer(spliceclosures, many=True)
@@ -62,7 +66,6 @@ class CombinedMapView(APIView):
             'fibercables': fibercable_serializer.data,
             'spliceclosures': spliceclosure_serializer.data
         })
-
 
 
 
